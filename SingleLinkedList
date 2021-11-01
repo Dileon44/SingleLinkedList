@@ -5,8 +5,6 @@
 #include <iterator>
 #include <algorithm>
 
-using namespace std;
-
 template <typename Type>
 class SingleLinkedList {
     // Узел списка
@@ -326,7 +324,7 @@ void swap(SingleLinkedList<Type>& lhs, SingleLinkedList<Type>& rhs) noexcept {
 
 template <typename Type>
 bool operator==(const SingleLinkedList<Type>& lhs, const SingleLinkedList<Type>& rhs) {
-    if (!equal(lhs.begin(), lhs.end(), rhs.begin(), rhs.end())) {
+    if (!std::equal(lhs.begin(), lhs.end(), rhs.begin(), rhs.end())) {
         return false;
     }
     return true;
